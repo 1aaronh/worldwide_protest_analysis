@@ -5,7 +5,7 @@ import seaborn as sns
 
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score, StratifiedKFold
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, plot_confusion_matrix, roc_auc_score, plot_roc_curve
 from sklearn import metrics
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
@@ -67,3 +67,9 @@ def con_mets(model, X2, y2):
     print(f'Specificity: {tn / (fp + tn)}')
     print(f'Sensitivity: {tp / (fn + tp)}')
     print(f'Precision:   {tp / (tp + fp)}')
+    
+def roc_curve(model,title,X_test,y_test):
+    plot_roc_curve(model,X_test,y_test)
+    plt.plot([0,1],[0,1],label='baseline',linestyle='--')
+    plt.title(f'{title} ROC Curve')
+    plt.legend;
