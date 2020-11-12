@@ -50,13 +50,13 @@ def split_scale(X, y):
 
 def scoring_class(model, X1, y1, X2, y2):
     model.fit(X1, y1)
-    print(f'{model} train score R2: {model.score(X1, y1)}')
-    print(f'{model} test score Rs: {model.score(X2, y2)}')
+    print(f'{model} train score Accuracy: {model.score(X1, y1)}')
+    print(f'{model} test score Accuracy: {model.score(X2, y2)}')
 
 def con_plot(model, X, y, title):
     sns.set_style("white")
     metrics.plot_confusion_matrix(model, X, y, cmap='Blues', 
-                          values_format='d', display_labels=['DnD', '40k'])
+                          values_format='d', display_labels=['No accomodations', 'Accomodations'])
     plt.title(f'Confusion matrix of predicted accomodations vs\n actual in {title}', fontsize=16)
     plt.show();
 
@@ -64,7 +64,6 @@ def con_mets(model, X2, y2):
     preds = model.predict(X2)
     # Save confusion matrix values
     tn, fp, fn, tp = confusion_matrix(y2, preds).ravel()
-    print(f'Type I error')
     print(f'Specificity: {tn / (fp + tn)}')
     print(f'Sensitivity: {tp / (fn + tp)}')
     print(f'Precision:   {tp / (tp + fp)}')
