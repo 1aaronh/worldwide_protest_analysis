@@ -57,7 +57,7 @@ Per the **Users Manual** that comes with the data [here]():
 > First, search for the four terms above in a country, over a year in four primary sources:
 > * New York Times Washington Post Christian Science Monitor Times of London
 > In MENA, consider these four sources plus the Jerusalem Post.
-    
+>  
 > If these sources return more than 100 articles, then proceed in searching the articles for evidence of codeable protest > events. If these four sources do not return at least 100 articles, then expand the search to include regional and other sources. Proceed with coding protest events. Note that sometimes even this more source-inclusive search will not return 100 articles – in this case, add wire-reports to the search – then code appropriate protest events regardless of total articles returned."
     
 The data includes protests from 1990 to 2019 in 166 countries.  It consists of 16,363 rows. The number of entries where protests occurred is 14,514 (1849 rows do not indicate where a protest occured.  It appears that these are included for the sake of time-series models so that almost each country has an entry for each year - whether or not protests occurred).
