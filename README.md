@@ -114,6 +114,9 @@ Since there were seven different demands and seven different responses, we used 
 
 *** other features go here
 
+We wished to have a clearer image of the duration of an individual protest.  The original values for indexing time were specific to the original publishers of the dataset, and required some transformation for features that would relate to elapsed time. The original features based on time consisted of "start" and "end" values for each day of a month, month of a year, and actual year.  Differences between each start and end day, month or year were calculated as new featres titled "days," "months" and "". A final "total_days" feature was calculated by multiplying the three features by the approximate number of days in their given units, example here:
+
+PLEASE NOTE: Inconsistencies would be present in this feature if, for example, the start and end day occur in different months, likewise in different years.  Most rows do not follow this pattern and we can therefore be confident that the result is not significantly damaged. We ask users to consider this feature as an approximate and not exact measure of protest duration.
 
 
 
