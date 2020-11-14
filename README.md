@@ -206,7 +206,6 @@ Each protest can have multiple demands and government responses. Two separate co
 * Although accommodations make up 5% of government responses, on average, protests with the longest duration are accommodated
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_duration_resp.png)
 
-![](location of key plot)
 
 ### MENA
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_avg_country_duration.png)
