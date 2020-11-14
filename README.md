@@ -239,9 +239,13 @@ Each protest can have multiple demands and government responses. Two separate co
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_DTree.png)
 
 ### South America
-* tbd.....
-* tbd.....
-![](location of key plot)
+* The Support vector machine had was the most accurately performing model for the South America region for binary classification and failed to improve over baseline as seen in the confusion mtrix below:
+
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_SVM.png)
+
+* When using multiclass classification the Logistic Regression performed the best for the South America region and was able to improve over baseline. Though the accuracy score appears to be worse than in the binary classification model the improvement over baseline demonstrates that balancing out the classes would likely improve accuracy in these models.
+
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_multiclass_metrics.png)
 
 -----
 # Conclusions/ Next Steps
