@@ -126,6 +126,11 @@ We wished to have a clearer image of the duration of an individual protest.  The
 
 PLEASE NOTE: Inconsistencies would be present in this feature if, for example, the start and end day occur in different months, likewise in different years.  Most protests had a duration of less than one month and we can therefore be confident that the "total_days" result is not significantly damaged. We ask users to consider this feature as an approximate and not exact measure of protest duration.
 
+### Protestdemands & Stateresponses
+Each protest can have multiple demands and government responses. Two separate columns were create to count the total of demands and responses for each individual event. The total of demands can range between 1 - 4 for one event, while responses range between 1 - 7 for one event. 
+* edf['protestdemands'] = edf[['protesterdemand1','protesterdemand2','protesterdemand3','protesterdemand4']].count(axis = 1)
+* edf['stateresponses'] = edf[['stateresponse1','stateresponse2','stateresponse3','stateresponse4','stateresponse5','stateresponse6','stateresponse7']].count(axis = 1)
+
 ---
 # General Workflow/ Methodology
 ---
@@ -194,8 +199,13 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_country_year_stateresponse.png)
 
 ### Europe
-* tbd.....
-* tbd.....
+* Protests in Europe were on a rise after 2013, peaking during 2018
+* Political issues were the catalysts of majority of the protests, especially in the Ukraine, UK, France, Germany, and Ireland
+* Labor wage dispute, and tax policy were the second and third most common protests in Europe
+* Approximately 60% of the protests are ignored, 20% end with crowd dispersal, and only 5% are accommodated
+* Although accommodations make up 5% of government responses, on average, protests with the longest duration are accommodated
+6.	(Insert duration chart)
+
 ![](location of key plot)
 
 ### MENA
@@ -220,7 +230,11 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_ada_metrics.png)
 
 ### Europe
-* tbd.....
+* A logistic regression model predicting the likelihood of 1 (Accommodation) for any given protests or 0 (No Accommodation)
+* Features considered were month, year, country, count of demands and responses, and duration, protestor violence
+* Accuracy results were 95%, which were aligned with baseline (95%)
+* Sensitivity was 0%, revealing the model was not able to predict positive outcomes  
+
 * tbd.....
 ![](location of key plot)
 
