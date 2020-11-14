@@ -49,7 +49,7 @@ These description come from four primary sources:
 For regions in the middle east/North Africa, the other primary source was:
  * Jerusalem Post
 
-Per the **Users Manual** that comes with the data [here]():
+Per the **Users Manual** that comes with the data [here](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/data/MM_users_manual_0515.pdf):
 
 > "The search is restricted to newspaper sources – it proceeds as follows.
 > First, search for the four terms above in a country, over a year in four primary sources:
@@ -73,7 +73,7 @@ The data includes protests from 1990 to 2019 in 166 countries.  It consists of 1
 # Data Dictionary
 ---
 
-The **Users Manual** includes a data dictionary [here](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt).  We describe key highlights from the data dictionary below, along with features that we engineered:
+The **Users Manual** includes a data dictionary [here](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/data/MM_users_manual_0515.pdf).  We describe key highlights from the data dictionary below, along with features that we engineered:
 
 ## Data from the Users Manual
 ***Protestor Demands***
@@ -114,8 +114,6 @@ The data includes 8 regions generally corresponding to continents:
 These individual regions became the basis for member specific analysis to compare and contrast the patterns in protest activity as well as evaluate different models. North America, Central America and Oceania were ignored for modeling purposes due to them having limited observations of protests.
 
 ## Engineered Features
-
-Since there were seven different demands and seven different responses, we used ...**JLW to finish**
 
 #### Protest Demands (group of 7 columns) & Protest Responses (group of 7 columns)
 
@@ -208,9 +206,9 @@ Each protest can have multiple demands and government responses. Two separate co
 ## EDA  - Highlights
 
 ### Entire Dataset
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_EDA.png)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Demands_over_time_world.png)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Responses_over_time_world.png)
 
 ### Africa
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_EDA.png)
@@ -243,9 +241,7 @@ Each protest can have multiple demands and government responses. Two separate co
 ## Modeling  - Highlights
 
 ### Africa
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_confusion_matrix.png)
 
 ### Asia
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_ada_metrics.png)
@@ -275,10 +271,12 @@ Each protest can have multiple demands and government responses. Two separate co
 ### Conclusion
 * We were not able to gain an insight on the features that predict a successful protest
 * None of our modeling was able to significantly predict protest accomodations over baseline
+* Best way to predict Accommodations is based on the region rather than any of our models - since the models performed poorly
 
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Accomodations_by_region.png)
 
 ### Recommendations
 * Combine our work on regional data across the entire data set
 * Time Series Analysis
 * Combining these data with data on the rise of different forms of social media and technology
-* And ...
+* And the dataset is very rich and could many more questions...
