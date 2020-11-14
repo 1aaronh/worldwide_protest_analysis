@@ -38,7 +38,7 @@
 ---
 # Background
 ---
-This data set consists of descriptions of protests throughout the world.
+This data set consists of descriptions of protests throughout the world [the data is located here online](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HTTWYL) from the mass mobilization project website located [here](https://massmobilization.github.io).
 
 These description come from four primary sources:
  * New York Times 
@@ -49,7 +49,7 @@ These description come from four primary sources:
 For regions in the middle east/North Africa, the other primary source was:
  * Jerusalem Post
 
-Per the **Users Manual** that comes with the data [here](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/data/MM_users_manual_0515.pdf):
+Per the **Users Manual** that comes with the data:
 
 > "The search is restricted to newspaper sources – it proceeds as follows.
 > First, search for the four terms above in a country, over a year in four primary sources:
