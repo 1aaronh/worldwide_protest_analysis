@@ -189,9 +189,9 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](location of key plot)
 
 ### Asia
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_avg_duration_num_protesters.png)
+
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_country_year_stateresponse.png)
 
 ### Europe
 * tbd.....
@@ -199,16 +199,15 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](location of key plot)
 
 ### MENA
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_avg_country_duration.png)
+
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_avg_country_duration.png)
 
 ### South America
 * tbd.....
 * tbd.....
 ![](location of key plot)
-
-
+----
 
 ## Modeling  - Highlights
 
@@ -218,9 +217,7 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](location of key plot)
 
 ### Asia
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_ada_metrics.png)
 
 ### Europe
 * tbd.....
@@ -228,19 +225,12 @@ PLEASE NOTE: Inconsistencies would be present in this feature if, for example, t
 ![](location of key plot)
 
 ### MENA
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_DTree.png)
 
 ### South America
 * tbd.....
 * tbd.....
 ![](location of key plot)
-
--------------
-![](image?)
-
-![](image?)
 
 -----
 # Conclusions/ Next Steps
