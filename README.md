@@ -203,7 +203,7 @@ Each protest can have multiple demands and government responses. Two separate co
 * Political issues were the catalysts of majority of the protests, especially in the Ukraine, UK, France, Germany, and Ireland
 * Labor wage dispute, and tax policy were the second and third most common protests in Europe
 * Approximately 60% of the protests are ignored, 20% end with crowd dispersal, and only 5% are accommodated
-* Although accommodations make up 5% of government responses, on average, protests with the longest duration are accommodated
+* Although accommodations make up 5% of government responses, on average, protests with the longest duration (4 days) are accommodated
 
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_duration_resp.png)
 
