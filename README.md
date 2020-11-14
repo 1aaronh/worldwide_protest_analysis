@@ -257,6 +257,9 @@ Each protest can have multiple demands and government responses. Two separate co
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_DTree.png)
 
 ### South America
+
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_%20State_reactions_count.png)
+
 * The Support vector machine had was the most accurately performing model for the South America region for binary classification and failed to improve over baseline as seen in the confusion mtrix below:
 
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_SVM.png)
