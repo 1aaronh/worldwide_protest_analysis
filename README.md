@@ -204,7 +204,7 @@ Each protest can have multiple demands and government responses. Two separate co
 * Labor wage dispute, and tax policy were the second and third most common protests in Europe
 * Approximately 60% of the protests are ignored, 20% end with crowd dispersal, and only 5% are accommodated
 * Although accommodations make up 5% of government responses, on average, protests with the longest duration are accommodated
-6.	(Insert duration chart)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_duration_resp.png)
 
 ![](location of key plot)
 
@@ -234,9 +234,7 @@ Each protest can have multiple demands and government responses. Two separate co
 * Features considered were month, year, country, count of demands and responses, and duration, protestor violence
 * Accuracy results were 95%, which were aligned with baseline (95%)
 * Sensitivity was 0%, revealing the model was not able to predict positive outcomes  
-
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_bi_conmatrix.png)
 
 ### MENA
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_DTree.png)
