@@ -5,32 +5,33 @@
 ---
 ### Files:
 * README.md - describes file
-* [Presentation.pdf](update location***************) 
-    - presentation in pdf form  
+* Protest outcomes.pdf - presentation in pdf form  
 
 ### Folders:
 * code - folder includes files for running the analysis
-   * Step 1 - import/clean data
-   * Step 2 - EDA on worldwide data
-   * Step 2a - EDA on Africa data
-   * Step 2b - EDA on Asia data
-   * Step 2c - EDA on Europe data
-   * Step 2d - EDA on MENA data
-   * Step 2d - EDA on South America data
-   * Step 3a - Modeling on Africa data
-   * Step 3b - Modeling on Asia data
-   * Step 3c - Modeling on Europe data
-   * Step 3d - Modeling on MENA data
-   * Step 3d - Modeling on South America data
-
+   * Notebook 1 - import/clean data
+   * Notebook 2 - EDA on worldwide data
+   * Notebook 2a.1 - EDA on Africa data
+   * Notebook 2a.2 - Modeling on Africa data
+   * Notebook 2b - EDA on Asia data
+   * Notebook 2c - EDA on Europe data
+   * Notebook 2d - EDA on MENA data
+   * Notebook 2e - EDA on South America data
+   * Notebook 2f - EDA on worldwide data, part 2
+   * classification.py - python file that contains functions that we reference in other notebooks
+   
 * data - folder includes data used for the analysis
    * mmALL_073119_csv.csv
-     - original file       
-   * xxx.csv
-     - description of file
-   * xxx.csv
-     - description of file
-
+     - original file    
+   * MM_users_manual_0515.pdf
+     - data dictionary and user manual  
+   * base_df.csv
+     - output from notebook 1
+   * df_all.csv
+     - output from notebook 2
+   * df_categories.csv
+     - output from notebook 2
+     
 * images:
    * screenshots used for README file
  
@@ -61,7 +62,6 @@ The data includes protests from 1990 to 2019 in 166 countries.  It consists of 1
 
 ---
 # Problem Statement
-#### What are the factors that contribute to a successful protest? How do these factors vary by region or country? Can we reliably predict a successful protest outcome?
 ---
 
 ### The aim of this project was:
@@ -117,7 +117,31 @@ These individual regions became the basis for member specific analysis to compar
 
 Since there were seven different demands and seven different responses, we used ...**JLW to finish**
 
-**JENN
+#### Protest Demands (group of 7 columns) & Protest Responses (group of 7 columns)
+
+**Note: A function to do this is in the classification.py file**
+Create a one-hot encoded column for each of either the 4 protest demand columns or 7 state response columns.  Since there are seven types of protest demands (and state responses) that can occur, rows where no protests occurred (so the demands/responses are 999 - we think these were included for time series analysis, see readme for further discussion), and rows where a few demands/responses were recorded but not the maximum of 4 demands and 7 responses, there were 9 different possible entries in any given cell for demands/responses. In addition, in a few of the categories not all 9 entries occurred out of the entire columns, so when one-hot encoding, the resulting dataframe for that column would have fewer than 9 columns.
+
+To allow the one-hot encoded data frame for each of the demands to be added together (to get the total times that any given demand occurred for a given row), and similarly for the response columns, this function uses concatenation and other techniques so that each dataframe becomes the same size and the output is a dataframe of the nine different demands, and then a dataframe of nine different responses - where the entry in a given column notes how often that particular demand/response occured with a given protest.
+
+This allows someone to easily check whether accommodations occurred by looking at one column, rather than seven different response columns.
+
+ * Add 7 new columns - one each for the 7 types of protester demands (indicating when a particular demand occurred for a protest) - 'labor wage dispute','land farm issue','police brutality','political behavior, process','price increases, tax policy','removal of politician','social restrictions'
+ * Add 7 new columns - one each for the 7 types of state responses (indicating when a particular response occurred for a protest) - 'accomodation','arrests','beatings','crowd dispersal','ignore','killings','shootings'
+
+Note that a few times, the entries are greater than 1 - indicating that more than one protest demand column or more than one state response column included the same demand/response.  We did not get a chance to look into this, but this could be pursued in the future (on whether this was intentional or a mistake).
+
+#### State Violence
+Add a column that indicates whether state violence occured with a protest (whether beatings, shootings, or killings occurred with the protest)
+* violent_responses = ['beatings','killings','shootings']
+* for response in violent_responses:
+*    df['state_violence'] = df_state_response_group[response]
+
+#### Protest Demands - all combos & Protest Responses - all combos
+Add a column for demands with entries that include all combinations of demands that occurred in the dataframe (using a 7-digit number with 1/0's to indicate the presence of a given type of demand)
+ * 'protesterdemand'
+Add a column for responses with entries that include all combinations of responses that occurred in the dataframe (using a 7-digit number with 1/0's to indicate the presence of a given type of response)
+ * 'stateresponse'
 
 #### Protest Duration & Total Days
 We wished to have a clearer image of the duration of an individual protest.  The original values for indexing time were specific to the original publishers of the dataset, and required some transformation for features that would relate to elapsed time. The original features based on time consisted of "start" and "end" values for each day of a month, month of a year, and actual year.  Differences between each start and end day, month or year were calculated as new featres titled "days," "months" and "years". A final "total_days" feature was calculated by multiplying the three features by the approximate number of days in their given units, two examples here:
@@ -189,9 +213,7 @@ Each protest can have multiple demands and government responses. Two separate co
 ![](location of key plot)
 
 ### Africa
-* tbd.....
-* tbd.....
-![](location of key plot)
+![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_EDA.png)
 
 ### Asia
 ![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_avg_duration_num_protesters.png)
