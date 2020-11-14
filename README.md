@@ -38,7 +38,7 @@
 ---
 # Background
 ---
-This data set consists of descriptions of protests throughout the world [the data is located here online](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HTTWYL) from the mass mobilization project website located [here](https://massmobilization.github.io).
+This data set consists of descriptions of protests throughout the world from the [mass mobilization project] (https://massmobilization.github.io) website.
 
 These description come from four primary sources:
  * New York Times 
