@@ -278,4 +278,4 @@ Each protest can have multiple demands and government responses. Two separate co
 * Combine our work on regional data across the entire data set
 * Time Series Analysis
 * Combining these data with data on the rise of different forms of social media and technology
-* And the dataset is very rich and could many more questions...
+* And the dataset is very rich and could answer many more questions.
