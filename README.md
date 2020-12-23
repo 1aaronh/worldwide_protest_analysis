@@ -1,5 +1,6 @@
 # Analyzing Protests throughout the world where the State gives accommodations
 ---
+*This project is the result of contributions from Julia Christensen, Aaron Hume, Ignacio Real & Jennifer Wlliamson.*
 
 # File Structure
 ---
@@ -73,7 +74,7 @@ The data includes protests from 1990 to 2019 in 166 countries.  It consists of 1
 # Data Dictionary
 ---
 
-The **Users Manual** includes a data dictionary [here](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/data/MM_users_manual_0515.pdf).  We describe key highlights from the data dictionary below, along with features that we engineered:
+The **Users Manual** includes a data dictionary [here](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/data/MM_users_manual_0515.pdf).  We describe key highlights from the data dictionary below, along with features that we engineered:
 
 ## Data from the Users Manual
 ***Protestor Demands***
@@ -188,35 +189,37 @@ Each protest can have multiple demands and government responses. Two separate co
     - K Nearest Neighbors
     - Random Forest
     - Bootstrapped Aggregator
-    - Support Vector Classifier
+    - Support Vector Machine
     
 * Standard Classification Metrics were measured, consisting of a Confusion Matrix, ROC Curves and the ratios for true and false positives and negatives.
 * Each accuracy score was evaluated against the baseline accuracy for its respective region.
+* **NOTE**: The classes were reblanced using imblearn's SMOTE for the Asia and MENA regions. The models performed significantly better after rebalancing and this is verified by the metrics for these specific regions.
 
 ---
 # Analysis
 * The two classes were significantly imbalanced for the entire dataset and by each individual region.
-* All models struggled to distinguish between classes as a result, with many having true positive counts of or near 0.
 * Depending on the given region, baseline accuracy measures were around 87-93%
 * A few models had higher test scores than baseline with only modest overfitting.
 * Many models had tradeoffs of better metrics but higher variance or visa versa.
 * One key takeaway from the imbalanced classes is that there are simply not many observations of a state having an accomodating response to protest activity.
+* All models struggled to distinguish between classes as a result, with many having true positive counts of or near 0.
+* This pattern changed dramatically for the Asia and MENA regions that were modeled with synthetic rebalancing of classes for experimentation.
 -----
 
 ## EDA  - Highlights
 
 ### Entire Dataset
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_EDA.png)
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Demands_over_time_world.png)
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Responses_over_time_world.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Africa_EDA.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Demands_over_time_world.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Responses_over_time_world.png)
 
 ### Africa
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_EDA.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Africa_EDA.png)
 
 ### Asia
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_avg_duration_num_protesters.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Asia_avg_duration_num_protesters.png)
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_country_year_stateresponse.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Asia_country_year_stateresponse.png)
 
 ### Europe
 * Protests in Europe were on a rise after 2013, peaking during 2018
@@ -225,44 +228,45 @@ Each protest can have multiple demands and government responses. Two separate co
 * Approximately 60% of the protests are ignored, 20% end with crowd dispersal, and only 5% are accommodated
 * Although accommodations make up 5% of government responses, on average, protests with the longest duration (4 days) are accommodated
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_duration_resp.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/ir_duration_resp.png)
 
 ### MENA
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_avg_country_duration.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/MENA_avg_country_duration.png)
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_avg_country_duration.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/MENA_total_protests_country.png)
 
 ### South America
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_%20State_reactions_count.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/SA_%20State_reactions_count.png)
 ----
 
 ## Modeling  - Highlights
 
 ### Africa
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Africa_confusion_matrix.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Africa_confusion_matrix.png)
 
 ### Asia
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Asia_ada_metrics.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Asia_randomforest_metrics.png)
 
 ### Europe
 * A logistic regression model predicting the likelihood of 1 (Accommodation) for any given protests or 0 (No Accommodation)
 * Features considered were month, year, country, count of demands and responses, and duration, protestor violence
 * Accuracy results were 95%, which were aligned with baseline (95%)
 * Sensitivity was 0%, revealing the model was not able to predict positive outcomes  
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/ir_bi_conmatrix.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/ir_bi_conmatrix.png)
 
 ### MENA
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/MENA_DTree.png)
+* SMOTE significantly improved model results with this region.  The Random Forest delivered the best metircs.
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/MENA_randomforest_metrics.png)
 
 ### South America
 
 * The Support vector machine had was the most accurately performing model for the South America region for binary classification and failed to improve over baseline as seen in the confusion mtrix below:
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_SVM.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/SA_SVM.png)
 
 * When using multiclass classification the Logistic Regression performed the best for the South America region and was able to improve over baseline. Though the accuracy score appears to be worse than in the binary classification model the improvement over baseline demonstrates that balancing out the classes would likely improve accuracy in these models.
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/SA_multiclass_metrics.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/SA_multiclass_metrics.png)
 
 -----
 # Conclusions/ Next Steps
@@ -272,7 +276,7 @@ Each protest can have multiple demands and government responses. Two separate co
 * None of our modeling was able to significantly predict protest accomodations over baseline
 * Best way to predict Accommodations is based on the region rather than any of our models - since the models performed poorly
 
-![](https://git.generalassemb.ly/1aaronh/Group_Project_Boo-Leans/blob/master/images/Accomodations_by_region.png)
+![](https://github.com/1aaronh/worldwide_protest_analysis/blob/master/images/Accomodations_by_region.png)
 
 ### Recommendations
 * Combine our work on regional data across the entire data set
